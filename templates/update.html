@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Profile</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <h2>Edit Profile ✏️</h2>
+        <form method="POST">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ data[0] }}"><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" value="{{ data[1] }}"><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" value="{{ data[2] }}"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ data[3] }}"><br><br>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" value="{{ data[4] }}"><br><br>
+
+            <input type="submit" value="Save Changes">
+        </form>
+    </body>
+</html>
